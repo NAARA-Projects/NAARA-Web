@@ -13,6 +13,9 @@ const Map: React.FC = () => {
     lng: 0, // Initial center longitude
   };
 
+  // Add a console log to ensure the API key is loaded
+  console.log(process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY);
+
   return (
     <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ''}>
       <GoogleMap mapContainerStyle={mapContainerStyle} center={center} zoom={10}>
