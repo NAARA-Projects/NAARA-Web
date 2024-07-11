@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
-import { CustomButtonProps } from '../Types';
+import { CustomButtonProps } from '../types';
+
 
 const CustomButton = ({ title, containerStyles, handleClick }: CustomButtonProps) => {
     return (

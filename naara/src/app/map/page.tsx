@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+require('dotenv').config({ path: '.env.local' })
 
 const Map: React.FC = () => {
   const mapContainerStyle = {
@@ -14,6 +15,8 @@ const Map: React.FC = () => {
   };
 
   // Add a console log to ensure the API key is loaded
+
+
   console.log(process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY);
 
   return (
