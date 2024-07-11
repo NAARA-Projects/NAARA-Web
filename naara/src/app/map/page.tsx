@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import { time } from "console";
 
 const Map: React.FC = () => {
   const mapContainerStyle = {
@@ -58,3 +59,24 @@ const Map: React.FC = () => {
 };
 
 export default Map;
+
+export default function DashboardPage () {
+  const [places, setPlaces] = useState<Place []>([
+    { //Events
+      name: "Event A",
+      date: "13 July 2024",
+    },
+    { //Events
+      name: "Event B",
+      date: "09 June 2024",
+    },
+    { //Trash Found
+      name: "Trash A",
+      status: "Cleared",
+    },
+    { //Trash Found
+      name: "Trash B",
+      status: "Pending",
+    }
+  ])
+}
