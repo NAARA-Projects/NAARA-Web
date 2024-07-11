@@ -60,7 +60,7 @@ const Map: React.FC = () => {
 
 export default Map;
 
-export default function DashboardPage () {
+/// export default function DashboardPage () {
   const [places, setPlaces] = useState<Place []>([
     { //Events
       name: "Event A",
