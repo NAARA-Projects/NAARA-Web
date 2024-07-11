@@ -17,7 +17,7 @@ const Navbar = () => {
                         <Link href='/' className="mx-2"><p>Home</p></Link>
                         <Link href='/map' className="mx-2"><p>Map</p></Link>
                     </div>
-                    <SearchInput customClass='max-w-[600px] flex shrink ml-40' classInput={undefined} />
+                    <SearchInput customClass='max-w-[600px] flex-initial shrink ml-40' classInput={undefined} />
                 </div>
             </nav>
         </header> 
