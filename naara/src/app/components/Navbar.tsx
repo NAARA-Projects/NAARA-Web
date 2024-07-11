@@ -5,8 +5,8 @@ import SearchInput from "./searchBar";
 
 const Navbar = () => {
     return(
-        <header>
-            <nav className="bg-[#0F0F0F]">
+        <header className="fixed z-10 w-full">
+            <nav className="fixed bg-[#0F0F0F] w-full">
                 <div className="relative container flex text-white py-[8px] px-16">
                     <div className="flex my-[6px]">
                         <div className="flex shrink-0">
