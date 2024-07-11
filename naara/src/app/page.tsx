@@ -1,14 +1,15 @@
 import Link from 'next/link';
-import Image from 'next/image'
+import Image from 'next/image';
+import Nav from './components/Navbar'
 
 export default function Home() {
   return (
-    <main className="flex w-full h-full min-h-screen items-center justify-between bg-[#0F0F0F]">
-      <div className="z-10 w-full max-w-5xl items-center font-mono text-sm">
-        <Image src={`/bg-image.png`} width={1920} height={556} className='w-fit h-auto' alt={'ocean'}/>
-        <h1 className='text-white'>
-          <Link href='/map'>map</Link>
-        </h1>
+    <main className="w-full h-full">
+      <header>
+        <Nav />
+      </header>
+      <div className='bg-[#0F0F0F]'>
+        <h1 className='w-full text-white'>Hello world!</h1>
       </div>
     </main>
   );
