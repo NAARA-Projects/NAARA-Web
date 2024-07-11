@@ -17,7 +17,7 @@ const Map: React.FC = () => {
   console.log(process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY);
 
   return (
-    <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ''}>
+    <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || 'AIzaSyBQ9TA-apd_CuM-hSGWJ4PNDFQ8amJ2mF0'}>
       <GoogleMap mapContainerStyle={mapContainerStyle} center={center} zoom={10}>
         <Marker position={center} />
         { /* Add other components like DirectionsRenderer here if needed */ }
