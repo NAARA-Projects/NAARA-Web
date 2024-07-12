@@ -27,7 +27,7 @@ const Navbar = () => {
     };
 
     return(
-        <header className="fixed z-10 w-full">
+        <header className="fixed z-50 w-full">
             <nav className="fixed bg-[#0F0F0F] w-full px-10">
                 <div className="container flex text-white py-[8px] px-16 flex-row items-center align-center justify-center">
                     <div className="flex my-[6px] mr-5 justify-self-start">

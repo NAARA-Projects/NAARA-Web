@@ -41,6 +41,7 @@ const config: Config = {
       borderRadius:{
         'custom-border-rad-51': '51px',
         'custom-border-rad-35': '35px',
+        'custom-border-rad-69': '69px',
       },
       width:{
         'custom-width-180': '180px',

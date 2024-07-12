@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Head from 'next/head';
 import { CustomButton, Footer } from './components';
-import styles from './components/Explore.module.css';
+import styles from './components/Navbar.module.css';
 
 export default function Home() {
   const downloadButtonClick = () => {
@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       
       
-      <main className='w-full h-full min-h-screen z-0 bg-customBlack'>
+      <main className='w-full h-full min-h-screen z-0 bg-customBlack'>  {/* Picture and text(topmost) */}
         <div className="relative w-full h-screen bg-cover bg-no-repeat bg-center" style={{ backgroundImage: 'url(/landingcover.svg)' }}>
           <div className='relative items-center justify-center pt-custom-padding-173 pb-0 text-white space-y-custom-space-12'>
             <p className='font-semibold font-lexend text-center text-5xl lg:text-5xl md-text-3xl'>Cleanup, made fun</p>
@@ -31,7 +31,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='flex flex-col justify-center items-center mb-16'>
+        <div className='flex flex-col justify-center items-center mb-16'>  {/* IPAD */}
           <div className='mb-custom-margin-40'>
             <Image src="ipadlastverylast.svg" alt='Ipad View' width={800} height={940} className='object-contain' />
           </div>
@@ -51,12 +51,12 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='mx-20'>
-          <div className='flex flex-row gap-x-10 w-full justify-center'>
+
+        <div className='mx-20 flex flex-col gap-y-14'> {/* Phone Views */}
+          <div className='flex flex-row gap-x-10 w-full justify-center'>{/* First phone view */}
             <div className='w-96'>
               <img src='Figma_Beta_bXYnmTpNR9.gif' alt='phone view gif' className=' object-contain rounded-custom-border-rad-35'></img>
             </div>
-            
             <div className='text-white w-custom-width-400'>
               <p className='font-bold font-lexend text-2xl'>
                 Intuitive user experience
@@ -66,8 +66,21 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </div>
 
+          <div className='flex flex-row gap-x-10 w-full justify-center'> {/* Second phone view */}
+            <div className='text-white w-custom-width-400'>
+              <p className='font-bold font-lexend text-2xl'>
+                Seamless registration process
+              </p>
+              <p className='font-extralight opacity-60 font-segoe text-base mt-4'>
+                Browsing, and registering for volunteer work has never been more fun and easy! Our app ensures a seamless registration process, enabling you to sign up quickly and effortlessly. Join us in just a few taps and start enjoying all our features immediately.
+              </p>
+            </div>
+            <div className='w-96'>
+              {/*put image preview*/}
+            </div>
+          </div>
+        </div>
         <Footer />
       </main>
     </>

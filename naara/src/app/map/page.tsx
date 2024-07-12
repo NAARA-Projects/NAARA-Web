@@ -96,7 +96,7 @@ const Map: React.FC = () => {
           </div>
         </div>
       </main>
-    </>jomok
+    </>
   );
 };
 
