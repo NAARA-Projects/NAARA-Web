@@ -45,7 +45,7 @@ const Map: React.FC = () => {
                 onCloseClick={() => setSelected(null)}
               >
                 <div>
-                  <CustomButton title={"MapButton"} handleClick={mapButtonClick} containerStyles="bg-black text-white h-full w-full"/>
+                  <CustomButton title={"MapButton"} handleClick={mapButtonClick} containerStyles="mx-2 bg-gradient-to-r from-[#CA8F36] to-[#D04C00] rounded-lg px-3 py-[2px]"/>
                   <h2><b>{location.title}</b></h2>
                   <p>{location.details}</p>
                 </div>
