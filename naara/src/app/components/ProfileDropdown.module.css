@@ -1,3 +1,4 @@
 .profile-dropdown {
     width: 180px; 
+    transition: opacity 0.6s ease;
 }

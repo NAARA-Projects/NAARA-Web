@@ -1,5 +1,5 @@
 "use client";
-import React, {useState} from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import SearchInput from "./searchBar";
@@ -9,39 +9,37 @@ import ProfileDropdown from "./ProfileDropdown";
 
 const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    
-    const handleProfileHover = () => {
-        setIsDropdownOpen(true);
-    };
-
-    const handleProfileLeave = () => {
-        setIsDropdownOpen(false);
-    };
+    const hoverTimeoutRef = useRef<number | null>(null);
 
     const handleMouseEnter = () => {
+        if (hoverTimeoutRef.current) {
+            clearTimeout(hoverTimeoutRef.current);
+        }
         setIsDropdownOpen(true);
     };
 
     const handleMouseLeave = () => {
-        setIsDropdownOpen(false);
+        hoverTimeoutRef.current = window.setTimeout(() => {
+            setIsDropdownOpen(false);
+        }, 3550); //adjust for longer time if needed (1000 = 1 second) -winner-
     };
 
-    return(
+    return (
         <header className="fixed z-10 w-full">
             <nav className="fixed bg-[#0F0F0F] w-full px-10">
                 <div className="container flex text-white py-[8px] px-16 flex-row items-center align-center justify-center">
                     <div className="flex my-[6px] mr-5 justify-self-start">
                         <div className="flex shrink-0">
-                            <Link href='/'><Image src={'/naara.svg'} alt={"logo"} height={25} width={25} className="object-contain"/></Link>
-                            <Link href='/' className="ml-4 mr-2 pt-[7px]"><Image src={'/naara..svg'} alt={"logo"} height={24} width={66} className="object-contain"/></Link>
+                            <Link href='/'><Image src={'/naara.svg'} alt={"logo"} height={25} width={25} className="object-contain" /></Link>
+                            <Link href='/' className="ml-4 mr-2 pt-[7px]"><Image src={'/naara..svg'} alt={"logo"} height={24} width={66} className="object-contain" /></Link>
                         </div>
-                        <Image src={'/line.svg'} alt={"logo"} height={24} width={1} className="mx-6"/>
+                        <Image src={'/line.svg'} alt={"logo"} height={24} width={1} className="mx-6" />
                         <Link href='/' className="mx-2"><p>Home</p></Link>
                         <Link href="/map" className={styles.link}><span className={styles.text}><b>Explore</b></span></Link>
                         <Link href='/' className="mx-5"><p>News</p></Link>
                     </div>
                     <div className="flex-initial flex w-full mx-40">
-                        <SearchInput customClass='min-w-[300px] max-width-[800px] shrink-0' classInput='w-full'/>
+                        <SearchInput customClass='min-w-[300px] max-width-[800px] shrink-0' classInput='w-full' />
                     </div>
                     <div className="flex flex-initial my-[2px] ml-auto justify-self-end">
                         <Link href='/login' className="mx-2 mt-[3.5px] mb-[2px] shrink-0"><p>Log in</p></Link>
@@ -57,7 +55,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </nav>
-        </header> 
+        </header>
     );
 }
 

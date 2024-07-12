@@ -13,6 +13,7 @@ const ProfileDropdown: React.FC<ProfileDropdownProps> = ({ isOpen, onClose }) =>
         <div
             className={`${styles['profile-dropdown']} absolute top-[36px] right-0 bg-black shadow-lg rounded-md mt-4`}
             onMouseLeave={onClose}
+            onMouseEnter={onClose}
         >
             <ul>
                 <li className="py-2 px-4 hover:bg-gradient-to-r from-[#5ABBDC] to-[#2457B5] text-white text-center cursor-pointer">My profile</li>
