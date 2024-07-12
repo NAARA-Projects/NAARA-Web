@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       
       
-      <main className='w-full h-[200vh] min-h-screen z-0 bg-customBlack'>
+      <main className='w-full h-[250vh] min-h-screen z-0 bg-customBlack'>
         <div className="relative w-full h-screen bg-cover bg-no-repeat bg-center" style={{ backgroundImage: 'url(/landingcover.svg)' }}>
           <div className='relative items-center justify-center pt-custom-padding-173 pb-0 text-white space-y-custom-space-12'>
             <p className='font-semibold font-lexend text-center text-5xl lg:text-5xl md-text-3xl'>Cleanup, made fun</p>
@@ -56,6 +56,19 @@ export default function Home() {
               <p className='font-extralight opacity-60 font-segoe text-base mt-4'>
                 Wonderfully crafted to accommodate the interests of users and organizations alike. An intuitive user experience, allowing you to effortlessly navigate and engage with our features. Enjoy a seamless, user-friendly interface designed to enhance your interactions and make every task straightforward and enjoyable.
               </p>
+            </div>
+          </div>
+          <div className='flex flex-row gap-x-10 w-full justify-center mt-32'>
+            <div className='text-white w-custom-width-400'>
+              <p className='font-bold font-lexend text-2xl'>
+                Seamless registration process
+              </p>
+              <p className='font-extralight opacity-60 font-segoe text-base mt-4'>
+                Browsing, and registering for volunteer work has never been more fun and easy! Our app ensures a seamless registration process, enabling you to sign up quickly and effortlessly. Join us in just a few taps and start enjoying all our features immediately.
+              </p>
+            </div>
+            <div className='w-96'>
+              <Image src='/figmashowcase.gif' alt='phone view gif' className=' object-contain rounded-custom-border-rad-35' width={600} height={337.5}></Image>
             </div>
           </div>
         </div>
