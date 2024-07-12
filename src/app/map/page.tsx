@@ -66,13 +66,13 @@ const Map: React.FC = () => {
         </LoadScript>
       </div>
       <main className="w-full flex items-center justify-center">
-        <div className="absolute w-[90vw] h-[2000px] bg-[#202020E6] top-[85vh] rounded-t-3xl p-3">
+        <div className="absolute w-[90vw] h-[2000px] bg-[#202020E6] top-[75vh] rounded-t-3xl p-3">
           <div className="flex-col flex items-center justify-center">
             <Image src={"/drag.png"} alt={""} width={133} height={6}/>
           <div className="flex-col flex items-center justify-center"></div>
             <div className="flex-row flex items-center justify-center">
               <div className="flex-col flex items-start justify-center">
-                <p className="text-white font-lexend font-semibold text-[24px]">Recently added</p>
+                <p className="text-white font-lexend font-semibold text-[24px] mb-2">Recently added</p>
                 <div className="flex-row flex items-center justify-center">
                   <div className="flex-col flex items-center justify-center">
                     <RecentlyAdded number="1." orgName="The Ocean Cleanup" eventName="PUBLISHED: “Big problems require big sol..." image={"/orgicon.png"}/>
@@ -88,9 +88,9 @@ const Map: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <Image src={"/separatordrag.png"} alt={"separator"} width={2} height={165} className="mx-4"/>
+              <Image src={"/separatordrag.png"} alt={"separator"} width={2} height={165} className="mx-4 mt-10"/>
               <div className="flex-col flex items-start justify-center">
-                <p className="text-white font-lexend font-semibold text-[24px]">Relevant to you</p>
+                <p className="text-white font-lexend font-semibold text-[24px] mb-2">Relevant to you</p>
                 <RelevantToYou eventName='Nusa Dua Beach' eventDesc='Nusa Dua is a resort area built in the 1970s in the southern part of Bali, Indonesia. Known as an enclave of large five-star resorts, it covers 350 hectares of land and encloses more than 20 resorts.' image={'/orgicon67.png'} userIcon={'/usericon.png'} userName='Stnorocwzo'/>
               </div>
             </div>
