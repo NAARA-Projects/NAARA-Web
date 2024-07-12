@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Head from 'next/head';
-import { CustomButton } from './components';
+import { CustomButton, Footer } from './components';
 
 export default function Home() {
   const downloadButtonClick = () => {
@@ -39,6 +39,7 @@ export default function Home() {
             </p>
           </div>
         </div>
+        <Footer />
       </main>
     </>
   );
