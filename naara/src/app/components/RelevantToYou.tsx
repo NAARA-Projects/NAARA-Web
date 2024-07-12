@@ -4,6 +4,8 @@ import React from "react";
 import CustomButton from "./CustomButton";
 
 const RecentlyAdded = ({ eventName, eventDesc, image, userIcon, userName }) => {
+  const Tab = () => {
+  }
   return (
     <div className="flex-col flex items-center justify-center m-1 w-[350px]">
       <div className="flex-row flex items-start justify-center">
@@ -18,7 +20,7 @@ const RecentlyAdded = ({ eventName, eventDesc, image, userIcon, userName }) => {
           <Image src={userIcon} alt={"usericon"} width={18} height={18} className="w-[18px] h-[18px]"/>
           <p>{`Posted by ${userName}`}</p>
         </div>
-        <CustomButton title={""} handleClick={handleClick} />
+        <CustomButton title={""} handleClick={Tab} />
       </div>
     </div>
   );
