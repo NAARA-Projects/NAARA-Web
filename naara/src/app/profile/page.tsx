@@ -1,5 +1,5 @@
 'use client'
-import {CustomButton, ProfileCards } from "../components";
+import { CustomButton, ProfileCards } from "@/app/components";
 
 export default function Profile() {
     const uselessFunction = () => {
@@ -15,7 +15,7 @@ export default function Profile() {
                 </div>
             </div>
             
-            <div> {/*All Bottom Part*/}
+            <div className="flex flex-row"> {/*All Bottom Part*/}
                 <div className="w-[668]">
                     <div> {/*Personal Info */}
                         <div className="ml-52">
@@ -92,8 +92,10 @@ export default function Profile() {
                     </div>
                 </div>
 
-                <div> {/*Right side*/}
-
+                <div className="flex flex-row"> {/*Right side*/}
+                    <div>
+                        <img src="/separatorProfile.svg" alt="separator" className="object-contain"></img>
+                    </div>
                     <div className="flex flex-col"> {/*John Doe Card*/}
                         <div className="p-5 w-80 h-36 bg-gradient-to-r from-[rgba(255,255,255,0.1)] to-[rgba(217, 217, 217, 0.1)] border border-[rgba(255,255,255,0.1)] rounded-3xl">
                             <div className="flex flex-col gap-y-1">
@@ -108,6 +110,15 @@ export default function Profile() {
                                 <div>
                                     <p className="text-white opacity-50 tracking-tight">ID: 05540209969236768948</p>
                                 </div>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col">
+                            <div>
+                                <p>Bio</p>
+                            </div>
+                            <div className="w-[380] h-[623] bg-gradient-to-r from-[rgba(255,255,255,0.1)] to-[rgba(217, 217, 217, 0.1)] border border-[rgba(255,255,255,0.1)] rounded-3xl">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                             </div>
                         </div>
                     </div>
