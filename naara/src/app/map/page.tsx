@@ -1,7 +1,6 @@
 "use client";
-import React, { useState, useCallback} from "react";
+import React, { useState, useCallback } from "react";
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
-import { time } from "console";
 
 const Map: React.FC = () => {
   const mapContainerStyle = {
@@ -14,108 +13,44 @@ const Map: React.FC = () => {
     lng: 115.090852, // Initial center longitude
   };
 
-  const location1 = {
-    lat: -8.805447,
-    lng: 115.233766,
-  }
+  const locations = [
+    { id: 1, lat: -8.805447, lng: 115.233766, title: "Nusa Dua Beach", details: "Event Details: 13 July 2024 - 10.00", icon: 'blue_MarkerB.png' },
+    { id: 2, lat: -8.604434, lng: 115.326080, title: "Segara Wilis Beach", details: "Trash Found! Host your clean-up event here!", icon: 'red_MarkerA.png' },
+    { id: 3, lat: -8.665914, lng: 115.138362, title: "Berawa Beach", details: "Event Details: 05 August 2024 - 15.00", icon: 'blue_MarkerA.png' },
+    { id: 4, lat: -8.690725, lng: 115.429313, title: "Sandy Bay Beach", details: "Trash Found! Host your clean-up event here!", icon: 'red_MarkerB.png' }
+  ];
 
-  const location2 = {
-    lat: -8.604434,
-    lng: 115.326080,
-  }
+  const [selected, setSelected] = useState<number | null>(null);
 
-  const location3 = {
-    lat: -8.665914,
-    lng: 115.138362,
-  }
-
-  const location4 = {
-    lat: -8.690725,
-    lng: 115.429313,
-  }
-
-  const [selected, setSelected] = useState<{ lat: number; lng: number } | null>(null);
-
-  const onMarkerClick = useCallback((position: { lat: number; lng: number }) => {
-    setSelected(position);
+  const onMarkerClick = useCallback((id: number) => {
+    setSelected(id);
   }, []);
-
-  // Add a console log to ensure the API key is loaded
-
-
-  console.log(process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY);
 
   return (
     <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || 'AIzaSyBQ9TA-apd_CuM-hSGWJ4PNDFQ8amJ2mF0'}>
       <GoogleMap mapContainerStyle={mapContainerStyle} center={center} zoom={10}>
-        <Marker 
-          position={location1}
-          icon= 'blue_MarkerB.png'
-          onClick={() => onMarkerClick(location1)} 
-        />
-        {selected && (
-          <InfoWindow
-            position={selected}
-            onCloseClick={() => setSelected(null)}
-          >
-            <div>
-              <h2><b>Nusa Dua Beach</b></h2>
-              <p>Event Details: 13 July 2024 - 10.00</p>
-            </div>
-          </InfoWindow>
-        )}
-        { /* Add other components like DirectionsRenderer here if needed */ }
-        <Marker 
-          position={location2}
-          icon= 'red_MarkerA.png' 
-          onClick={() => onMarkerClick(location2)} 
-        />
-        {selected && (
-          <InfoWindow
-            position={selected}
-            onCloseClick={() => setSelected(null)}
-          >
-            <div>
-              <h2><b>Segara Wilis Beach</b></h2>
-              <p>Trash Found! Host your clean-up event here!</p>
-            </div>
-          </InfoWindow>
-        )}
-        { /* Add other components like DirectionsRenderer here if needed */ }
-        <Marker position={location3}
-          icon= 'blue_MarkerA.png' 
-          onClick={() => onMarkerClick(location3)} 
-        />
-        {selected && (
-          <InfoWindow
-            position={selected}
-            onCloseClick={() => setSelected(null)}
-          >
-            <div>
-              <h2><b>Berawa Beach</b></h2>
-              <p>Event Details: 05 August 2024 - 15.00</p>
-            </div>
-          </InfoWindow>
-        )}
-        { /* Add other components like DirectionsRenderer here if needed */ }
-        <Marker position={location4}
-          icon= 'red_MarkerB.png' 
-          onClick={() => onMarkerClick(location4)} 
-        />
-        {selected && (
-          <InfoWindow
-            position={selected}
-            onCloseClick={() => setSelected(null)}
-          >
-            <div>
-              <h2><b>Sandy Bay Beach</b></h2>
-              <p>Trash Found! Host your clean-up event here!</p>
-            </div>
-          </InfoWindow>
-        )}
+        {locations.map(location => (
+          <React.Fragment key={location.id}>
+            <Marker
+              position={{ lat: location.lat, lng: location.lng }}
+              icon={location.icon}
+              onClick={() => onMarkerClick(location.id)}
+            />
+            {selected === location.id && (
+              <InfoWindow
+                position={{ lat: location.lat, lng: location.lng }}
+                onCloseClick={() => setSelected(null)}
+              >
+                <div>
+                  <h2><b>{location.title}</b></h2>
+                  <p>{location.details}</p>
+                </div>
+              </InfoWindow>
+            )}
+          </React.Fragment>
+        ))}
       </GoogleMap>
     </LoadScript>
-    
   );
 };
 
