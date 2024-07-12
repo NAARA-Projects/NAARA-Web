@@ -1,8 +1,11 @@
 "use client";
 import React, { useState, useCallback } from "react";
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
+import { CustomButton } from "../components";
 
 const Map: React.FC = () => {
+  const mapButtonClick = () => {
+  }
   const mapContainerStyle = {
     width: '100%',
     height: '100vh',
@@ -42,6 +45,7 @@ const Map: React.FC = () => {
                 onCloseClick={() => setSelected(null)}
               >
                 <div>
+                  <CustomButton title={"MapButton"} handleClick={mapButtonClick} containerStyles="bg-black text-white h-full w-full"/>
                   <h2><b>{location.title}</b></h2>
                   <p>{location.details}</p>
                 </div>
