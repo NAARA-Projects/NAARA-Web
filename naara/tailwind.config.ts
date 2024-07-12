@@ -46,6 +46,8 @@ const config: Config = {
         'custom-width-180': '180px',
         'custom-width-575': '575px',
         'custom-width-100': '100px',
+        'custom-width-400': '500px',
+        'custom-width-350': '350px',
       },
       height:{
         'custom-height-47': '47px',

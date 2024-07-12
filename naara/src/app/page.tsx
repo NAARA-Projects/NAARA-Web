@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Head from 'next/head';
 import { CustomButton, Footer } from './components';
-import styles from './components/MyComponent.module.css';
+import styles from './components/Explore.module.css';
 
 export default function Home() {
   const downloadButtonClick = () => {
@@ -33,7 +33,7 @@ export default function Home() {
 
         <div className='flex flex-col justify-center items-center mb-16'>
           <div className='mb-custom-margin-40'>
-            <Image src="ipadLast.svg" alt='Ipad View' width={800} height={940} className='object-contain' />
+            <Image src="ipadlastverylast.svg" alt='Ipad View' width={800} height={940} className='object-contain' />
           </div>
 
           <div className='mb-custom-margin-40'>
@@ -51,10 +51,19 @@ export default function Home() {
           </div>
         </div>
 
-        <div>
-          <div className='mx-36'>
+        <div className='mx-20'>
+          <div className='flex flex-row gap-x-10 w-full justify-center'>
             <div className='w-96'>
               <img src='Figma_Beta_bXYnmTpNR9.gif' alt='phone view gif' className=' object-contain rounded-custom-border-rad-35'></img>
+            </div>
+            
+            <div className='text-white w-custom-width-400'>
+              <p className='font-bold font-lexend text-2xl'>
+                Intuitive user experience
+              </p>
+              <p className='font-extralight opacity-60 font-segoe text-base mt-4'>
+                Wonderfully crafted to accommodate the interests of users and organizations alike. An intuitive user experience, allowing you to effortlessly navigate and engage with our features. Enjoy a seamless, user-friendly interface designed to enhance your interactions and make every task straightforward and enjoyable.
+              </p>
             </div>
           </div>
         </div>
