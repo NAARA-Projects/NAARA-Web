@@ -43,11 +43,15 @@ const Map: React.FC = () => {
               <InfoWindow
                 position={{ lat: location.lat, lng: location.lng }}
                 onCloseClick={() => setSelected(null)}
-              >
+              > 
                 <div>
-                  <CustomButton title={"MapButton"} handleClick={mapButtonClick} containerStyles="mx-2 bg-gradient-to-r from-[#CA8F36] to-[#D04C00] rounded-lg px-3 py-[2px]"/>
+                <p className='font-segoe font-thin text-black text-m text-center'>
                   <h2><b>{location.title}</b></h2>
                   <p>{location.details}</p>
+                  <div className="container flex text-white py-[8px] px-16 flex-row items-center align-center justify-center">
+                  <CustomButton title={"+ Join/Host"} handleClick={mapButtonClick} containerStyles="mx-2 bg-gradient-to-r from-[#5ABBDC] to-[#2457B5] rounded-lg px-3 py-[2px]"/>
+                  </div>
+                </p>
                 </div>
               </InfoWindow>
             )}

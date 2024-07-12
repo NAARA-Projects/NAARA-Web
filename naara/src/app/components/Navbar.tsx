@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import SearchInput from "./searchBar";
 import CustomButton from "./CustomButton";
+import styles from './MyComponent.module.css';
 
 const Navbar = () => {
     const subscribeButtonClick = () => {
@@ -19,7 +20,7 @@ const Navbar = () => {
                         </div>
                         <Image src={'/line.svg'} alt={"logo"} height={24} width={1} className="mx-6"/>
                         <Link href='/' className="mx-2"><p>Home</p></Link>
-                        <Link href='/map' className="mx-2"><p>Map</p></Link>
+                        <Link href='/map' legacyBehavior><a className={`mx-2 ${styles.link}`}><span className={styles.text}><b>Explore</b></span></a></Link>
                     </div>
                     <div className="flex-initial flex w-full mx-40">
                         <SearchInput customClass='min-w-[300px] max-width-[800px] shrink-0' classInput='w-full' />

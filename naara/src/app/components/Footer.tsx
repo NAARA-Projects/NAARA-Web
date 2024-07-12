@@ -10,7 +10,7 @@ const Footer = () => {
                     <p className="text-white text-lg font-lexend font-bold ">
                         SUPPLEMENTARY RESOURCES
                     </p>
-                    <div className="text-sm text-white opacity-50 flex flex-col gap-y-custom-gap-12 font-segoe font-thin">
+                    <div className="text-sm text-white opacity-50 flex flex-col gap-y-custom-gap-12 font-segoe font-thin hover:cursor-pointer">
                     <p>
                         About Us
                     </p>
@@ -27,7 +27,7 @@ const Footer = () => {
                     <p className="text-white text-lg font-lexend font-bold" >
                         ADDITIONAL INFORMATION
                     </p>
-                    <div className="text-sm text-white opacity-50 font-segoe font-thin flex flex-col gap-y-custom-gap-12">
+                    <div className="text-sm text-white opacity-50 font-segoe font-thin flex flex-col gap-y-custom-gap-12 hover: cursor-pointer">
                         <div className="flex flex-col">
                             <p>
                                 Vida Bumiwedari, Jl. Saraswati No.1, Padurenan, Kec. Mustika Jaya,
@@ -46,7 +46,7 @@ const Footer = () => {
                     <div className="font-lexend font-bold text-lg">
                         FOLLOW US
                     </div>
-                    <div className="flex flex-row gap-x-custom-gap-51">
+                    <div className="flex flex-row gap-x-custom-gap-51 hover:cursor-pointer">
                         <div className="flex flex-col gap-y-custom-gap-12 h-custom-height-27">
                             <div className="flex flex-row gap-x-custom-gap-12">
                                 <img src="/Xlogo.svg" alt="X" className="h-full object-contain"></img>
