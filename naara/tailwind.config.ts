@@ -40,21 +40,25 @@ const config: Config = {
       },
       borderRadius:{
         'custom-border-rad-51': '51px',
+        'custom-border-rad-35': '35px',
       },
       width:{
         'custom-width-180': '180px',
         'custom-width-575': '575px',
+        'custom-width-100': '100px',
       },
       height:{
         'custom-height-47': '47px',
         'custom-height-64': '64px',
         'custom-height-27': '27px',
+        'custom-height-300': '300px',
       },
       margin:{
         'custom-margin-77': '77px',
         'custom-margin-173': '173px',
         'custom-margin-82': '82px',
         'custom-margin-89': '89px',
+        'custom-margin-40': '40px',
       },
       gap:{
         'custom-gap-16': '16px',
@@ -62,6 +66,7 @@ const config: Config = {
         'custom-gap-15': '15px',
         'custom-gap-12': '12px',
         'custom-gap-51': '51px',
+        'custom-gap-100': '100px',
       }
     },
   },
