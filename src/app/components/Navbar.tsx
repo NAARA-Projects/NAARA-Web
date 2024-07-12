@@ -34,15 +34,15 @@ const Navbar = () => {
                             <Link href='/' className="ml-4 mr-2 pt-[7px]"><Image src={'/naara..svg'} alt={"logo"} height={24} width={66} className="object-contain" /></Link>
                         </div>
                         <Image src={'/line.svg'} alt={"logo"} height={24} width={1} className="mx-6" />
-                        <Link href='/' className="mx-2"><p>Home</p></Link>
+                        <Link href="/" className={`mr-[4px] ${styles.link3}`}><span className={styles.text3}>Home</span></Link>
                         <Link href="/map" className={styles.link}><span className={styles.text}><b>Explore</b></span></Link>
-                        <Link href='/' className="mx-5"><p>News</p></Link>
+                        <Link href='/' className={`mx-[5px] ml-[3.5px] ${styles.link3}`}><span className={styles.text3}>News</span></Link>
                     </div>
                     <div className="flex-initial flex w-full mx-40">
                         <SearchInput customClass='min-w-[300px] max-width-[800px] shrink-0' classInput='w-full' />
                     </div>
                     <div className="flex flex-initial my-[2px] ml-auto justify-self-end">
-                        <Link href='/login' className="mx-2 mt-[3.5px] mb-[2px] shrink-0"><p>Log in</p></Link>
+                    <Link href='/' className={`mx-[2px] mt-[3.5px] mb-[2px] mr-[4.7px] shrink-0 ${styles.link3}`}><span className={styles.text3}>Log in</span></Link>
                         <Link href="/subscribe" className={`mt-[4px] ${styles.link2}`}><span className={styles.text2}><b>Subscribe</b></span></Link>
                         <div
                             className="flex flex-initial my-[2px] ml-auto justify-self-end relative"
