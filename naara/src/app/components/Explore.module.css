@@ -8,7 +8,7 @@
   }
   
   .link .text:hover {
-    filter: brightness(155%);
+    filter: brightness(170%);
   }
   
   .text {
@@ -17,9 +17,9 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-    transition: filter 1s ease, text-decoration 0.6s ease;
+    transition: filter 0.3s ease, text-decoration 0.3s ease;
     position: relative; /* Ensure relative positioning for ::after pseudo-element */
-    padding-left: 10px;
+    padding-left: 10px; /* Move text to the right by 3px */
   }
   
   .link .text::after {
@@ -31,7 +31,7 @@
     bottom: -5px; /* Position it right below the text */
     left: 24px; /* Adjust the left position to center or offset the underline */
     transform: scaleX(0);
-    transition: transform 0.6s ease, width 0.3s ease; /* Added width transition for smoother effect */
+    transition: transform 0.3s ease, width 0.3s ease; /* Added width transition for smoother effect */
   }
   
   .link:hover .text::after {

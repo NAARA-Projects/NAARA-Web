@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import SearchInput from "./searchBar";
 import CustomButton from "./CustomButton";
-import styles from './MyComponent.module.css';
+import styles from './Explore.module.css';
 
 const Navbar = () => {
     const subscribeButtonClick = () => {
@@ -20,14 +20,15 @@ const Navbar = () => {
                         </div>
                         <Image src={'/line.svg'} alt={"logo"} height={24} width={1} className="mx-6"/>
                         <Link href='/' className="mx-2"><p>Home</p></Link>
-                        <Link href='/map' legacyBehavior><a className={`mx-2 ${styles.link}`}><span className={styles.text}><b>Explore</b></span></a></Link>
+                        <Link href="/map" className={styles.link}><span className={styles.text}><b>Explore</b></span></Link>
+                        <Link href='/' className="mx-5"><p>News</p></Link>
                     </div>
                     <div className="flex-initial flex w-full mx-40">
                         <SearchInput customClass='min-w-[300px] max-width-[800px] shrink-0' classInput='w-full' />
                     </div>
                     <div className="flex flex-initial my-[2px] ml-auto justify-self-end">
                         <Link href='/login' className="mx-2 my-[2px] shrink-0"><p>Log in</p></Link>
-                        <CustomButton title={"Subscribe"} handleClick={subscribeButtonClick} containerStyles="mx-2 bg-gradient-to-r from-[#CA8F36] to-[#D04C00] rounded-lg px-3 py-[2px]" />
+                        <Link href="/map" className={styles.link}><span className={styles.text}><b>Subscribe</b></span></Link>
                         <Image src={"/profileHolder.svg"} alt={"profile"} width={32} height={32} className="mx-4"/>
                     </div>
                 </div>
