@@ -3,12 +3,14 @@ import Footer from './Footer';
 import Navbar from './Navbar';
 import searchBar from './searchBar';
 import RecentlyAdded from './RecentlyAdded';
+import RelevantToYou from './RelevantToYou';
 
 export{
     CustomButton,
     Footer,
     Navbar,
     searchBar,
-    RecentlyAdded
+    RecentlyAdded,
+    RelevantToYou
 }
 

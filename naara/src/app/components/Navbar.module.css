@@ -1,0 +1,76 @@
+.link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit; 
+    position: relative; 
+  }
+  
+  .link2 {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit; 
+    position: relative;
+  }
+
+  .link .text:hover {
+    filter: brightness(170%);
+  }
+
+  .link2 .text2:hover {
+    filter: brightness(170%);
+  }
+  
+  .text {
+    background: linear-gradient(to right, #5ABBDC, #2457B5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    transition: filter 0.3s ease, text-decoration 0.3s ease;
+    position: relative; 
+    padding-left: 10px; 
+  }
+  
+  .text2 {
+    background: linear-gradient(to right, #CA8F36, #D04C00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    transition: filter 0.3s ease, text-decoration 0.3s ease;
+    position: relative; 
+    padding-left: 10px; 
+  }
+
+  .link .text::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 40px); 
+    height: 2px;
+    background-color: #2457B5;
+    bottom: -5px; 
+    left: 24px; 
+    transform: scaleX(0);
+    transition: transform 0.3s ease, width 0.3s ease; 
+  }
+  
+  .link2 .text2::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 40px); 
+    height: 2px;
+    background-color: #D04C00; 
+    bottom: -5px; 
+    left: 24px; 
+    transform: scaleX(0);
+    transition: transform 0.3s ease, width 0.3s ease; 
+  }
+
+  .link:hover .text::after {
+    transform: scaleX(1);
+  }
+  
+  .link2:hover .text2::after {
+    transform: scaleX(1);
+  }
+  

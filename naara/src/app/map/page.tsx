@@ -4,6 +4,7 @@ import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/ap
 import { CustomButton } from "../components";
 import Image from "next/image";
 import { RecentlyAdded } from "../components";
+import { RelevantToYou } from "../components";
 
 const Map: React.FC = () => {
   const mapButtonClick = () => {
@@ -70,18 +71,27 @@ const Map: React.FC = () => {
             <Image src={"/drag.png"} alt={""} width={133} height={6}/>
           </div>
           <div className="flex-row flex items-center justify-center">
-            <div className="flex-col flex items-center justify-center">
+            <div className="flex-col flex items-start justify-center">
               <p className="text-white font-lexend font-semibold text-[24px]">Recently added</p>
               <div className="flex-row flex items-center justify-center">
                 <div className="flex-col flex items-center justify-center">
-                  <RecentlyAdded number="1." orgName="test" eventName="test" />
+                  <RecentlyAdded number="1." orgName="The Ocean Cleanup" eventName="PUBLISHED: “Big problems require big sol..." image={"/orgicon.png"}/>
+                  <RecentlyAdded number="2." orgName="Ocean Conservancy" eventName="PUBLISHED: “Preventing marine pollui" image={"/orgicon1.png"}/>
+                </div>
+                <div className="flex-col flex items-center justify-center">
+                  <RecentlyAdded number="3." orgName="The Ocean Cleanup" eventName="PUBLISHED: “Big problems require big sol..." image={"/orgicon.png"}/>
+                  <RecentlyAdded number="4." orgName="The Ocean Cleanup" eventName="PUBLISHED: “Big problems require big sol..." image={"/orgicon.png"}/>
+                </div>
+                <div className="flex-col flex items-center justify-center">
+                  <RecentlyAdded number="5." orgName="The Ocean Cleanup" eventName="PUBLISHED: “Big problems require big sol..." image={"/orgicon.png"}/>
+                  <RecentlyAdded number="6." orgName="The Ocean Cleanup" eventName="PUBLISHED: “Big problems require big sol..." image={"/orgicon.png"}/>
                 </div>
               </div>
             </div>
             <Image src={"/separatordrag.png"} alt={"separator"} width={1} height={165} />
-            <div className="flex-col flex items-center justify-center">
+            <div className="flex-col flex items-start justify-center">
               <p className="text-white font-lexend font-semibold text-[24px]">Relevant to you</p>
-              
+              <RelevantToYou eventName='Nusa Dua Beach' eventDesc='Nusa Dua is a resort area built in the 1970s in the southern part of Bali, Indonesia. Known as an enclave of large five-star resorts, it covers 350 hectares of land and encloses more than 20 resorts.' image={'/orgicon67.png'}/>
             </div>
           </div>
         </div>

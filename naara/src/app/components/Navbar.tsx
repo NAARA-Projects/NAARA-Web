@@ -1,14 +1,31 @@
 "use client";
-import React from "react";
+import React, {useState} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import SearchInput from "./searchBar";
 import CustomButton from "./CustomButton";
-import styles from './Explore.module.css';
+import styles from './Navbar.module.css';
+import ProfileDropdown from "./ProfileDropdown";
 
 const Navbar = () => {
-    const subscribeButtonClick = () => {
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    
+    const handleProfileHover = () => {
+        setIsDropdownOpen(true);
     };
+
+    const handleProfileLeave = () => {
+        setIsDropdownOpen(false);
+    };
+
+    const handleMouseEnter = () => {
+        setIsDropdownOpen(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsDropdownOpen(false);
+    };
+
     return(
         <header className="fixed z-10 w-full">
             <nav className="fixed bg-[#0F0F0F] w-full px-10">
@@ -24,14 +41,19 @@ const Navbar = () => {
                         <Link href='/' className="mx-5"><p>News</p></Link>
                     </div>
                     <div className="flex-initial flex w-full mx-40">
-                        <SearchInput customClass='min-w-[300px] max-width-[800px] shrink-0' classInput='w-full' />
+                        <SearchInput customClass='min-w-[300px] max-width-[800px] shrink-0' classInput='w-full'/>
                     </div>
                     <div className="flex flex-initial my-[2px] ml-auto justify-self-end">
                         <Link href='/login' className="mx-2 mt-[3.5px] mb-[2px] shrink-0"><p>Log in</p></Link>
-                        <Link href="/subscribe" className={`mt-[2.5px] ${styles.link2}`}>
-                <span className={styles.text2}><b>Subscribe</b></span>
-            </Link>
-                        <Image src={"/profileHolder.svg"} alt={"profile"} width={32} height={32} className="mx-4"/>
+                        <Link href="/subscribe" className={`mt-[2.5px] ${styles.link2}`}><span className={styles.text2}><b>Subscribe</b></span></Link>
+                        <div
+                            className="flex flex-initial my-[2px] ml-auto justify-self-end relative"
+                            onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <Image src="/profileHolder.svg" alt="profile" width={32} height={32} className="mx-4" />
+                            <ProfileDropdown isOpen={isDropdownOpen} onClose={handleMouseLeave} />
+                        </div>
                     </div>
                 </div>
             </nav>
