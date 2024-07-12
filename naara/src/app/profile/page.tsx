@@ -94,7 +94,7 @@ export default function Profile() {
 
                 <div className="flex flex-row"> {/*Right side*/}
                     <div>
-                        <img src="/separatorProfile.svg" alt="separator" className="object-contain"></img>
+                        <img src="/separatorProfile.svg" alt="separator" className="object-contain mx-10"></img>
                     </div>
                     <div className="flex flex-col"> {/*John Doe Card*/}
                         <div className="p-5 w-80 h-36 bg-gradient-to-r from-[rgba(255,255,255,0.1)] to-[rgba(217, 217, 217, 0.1)] border border-[rgba(255,255,255,0.1)] rounded-3xl">

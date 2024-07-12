@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './ProfileDropdown.module.css';
+import Link from 'next/link';
 
 interface ProfileDropdownProps {
     isOpen: boolean;
@@ -16,7 +17,7 @@ const ProfileDropdown: React.FC<ProfileDropdownProps> = ({ isOpen, onClose }) =>
             onMouseEnter={onClose}
         >
             <ul>
-                <li className="py-2 px-4 hover:bg-gradient-to-r from-[#5ABBDC] to-[#2457B5] text-white text-center cursor-pointer">My profile</li>
+                <Link href='/profile'><li className="py-2 px-4 hover:bg-gradient-to-r from-[#5ABBDC] to-[#2457B5] text-white text-center cursor-pointer">My profile</li></Link>
                 <li className="py-2 px-4 hover:bg-gradient-to-r from-[#CA8F36] to-[#D04C00] text-white text-center cursor-pointer">Settings</li>
                 <li className="py-2 px-4 hover:bg-gradient-to-r from-[#ADE572] to-[#6EB79D] text-[#B60000] text-center cursor-pointer"><b>Log out</b></li>
             </ul>
