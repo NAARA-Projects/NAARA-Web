@@ -4,7 +4,7 @@ import React from "react";
 const RecentlyAdded = ({ number, orgName, eventName, image }) => {
   return (
     <div className="flex-row flex items-center justify-center m-1">
-      <div className="bg-[#D9D9D91A] rounded-lg w-[27px] h-[27px] flex items-center justify-center mr-4">
+      <div className="bg-[#D9D9D91A] rounded-lg w-[27px] h-[27px] flex items-center justify-center mx-2">
         <p className="font-segoe font-semibold text-white text-[13px]">{number}</p>
       </div>
       <div className="flex-row flex items-center justify-center p-2 bg-[#D9D9D91A] rounded-lg w-[264px]">
