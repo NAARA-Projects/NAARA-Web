@@ -20,7 +20,7 @@ const RecentlyAdded = ({ eventName, eventDesc, image, userIcon, userName }) => {
           <Image src={userIcon} alt={"usericon"} width={18} height={18} className="w-[18px] h-[18px]"/>
           <p>{`Posted by ${userName}`}</p>
         </div>
-        <CustomButton title={""} handleClick={Tab} />
+        <CustomButton title={"Test"} handleClick={Tab} />
       </div>
     </div>
   );
