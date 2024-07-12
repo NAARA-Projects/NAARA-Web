@@ -1,0 +1,35 @@
+.link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit; /* Ensure link inherits text color */
+    position: relative; /* Make sure the pseudo-element is positioned relative to the link */
+  }
+  
+  .link .text:hover {
+    filter: brightness(155%);
+  }
+  
+  .text {
+    background: linear-gradient(to right, #5ABBDC, #2457B5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    transition: filter 1s, text-decoration 0.6s;
+  }
+  
+  .link .text::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #2457B5; /* Use a color that stands out */
+    bottom: -2px; /* Position it right below the text */
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.6s ease;
+  }
+  
+  .link:hover .text::after {
+    transform: scaleX(1);
+  }
