@@ -72,7 +72,7 @@ const Map: React.FC = () => {
         />
         {selected && (
           <InfoWindow
-            position={location2}
+            position={selected}
             onCloseClick={() => setSelected(null)}
           >
             <div>
@@ -88,7 +88,7 @@ const Map: React.FC = () => {
         />
         {selected && (
           <InfoWindow
-            position={location3}
+            position={selected}
             onCloseClick={() => setSelected(null)}
           >
             <div>
@@ -104,7 +104,7 @@ const Map: React.FC = () => {
         />
         {selected && (
           <InfoWindow
-            position={location4}
+            position={selected}
             onCloseClick={() => setSelected(null)}
           >
             <div>
