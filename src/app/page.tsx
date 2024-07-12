@@ -68,7 +68,7 @@ export default function Home() {
             </div>
             <div className='w-96'>
               <Image src='/figmashowcase.gif' alt='phone view gif' className=' object-contain rounded-custom-border-rad-35' width={600} height={337.5}></Image>
-            </div>
+            </div> ow
           </div>
         </div>
       </main>
