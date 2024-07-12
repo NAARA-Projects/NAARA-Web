@@ -49,9 +49,9 @@ const Map: React.FC = () => {
     <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || 'AIzaSyBQ9TA-apd_CuM-hSGWJ4PNDFQ8amJ2mF0'}>
       <GoogleMap mapContainerStyle={mapContainerStyle} center={center} zoom={10}>
         <Marker 
-        position={location1}
-        icon= 'blue_MarkerB.png'
-        onClick={() => onMarkerClick(location1)} 
+          position={location1}
+          icon= 'blue_MarkerB.png'
+          onClick={() => onMarkerClick(location1)} 
         />
         {selected && (
           <InfoWindow
@@ -66,9 +66,9 @@ const Map: React.FC = () => {
         )}
         { /* Add other components like DirectionsRenderer here if needed */ }
         <Marker 
-        position={location2}
-        icon= 'red_MarkerA.png' 
-        onClick={() => onMarkerClick(location2)} 
+          position={location2}
+          icon= 'red_MarkerA.png' 
+          onClick={() => onMarkerClick(location2)} 
         />
         {selected && (
           <InfoWindow
@@ -83,8 +83,8 @@ const Map: React.FC = () => {
         )}
         { /* Add other components like DirectionsRenderer here if needed */ }
         <Marker position={location3}
-        icon= 'blue_MarkerA.png' 
-        onClick={() => onMarkerClick(location3)} 
+          icon= 'blue_MarkerA.png' 
+          onClick={() => onMarkerClick(location3)} 
         />
         {selected && (
           <InfoWindow
@@ -99,8 +99,8 @@ const Map: React.FC = () => {
         )}
         { /* Add other components like DirectionsRenderer here if needed */ }
         <Marker position={location4}
-        icon= 'red_MarkerB.png' 
-        onClick={() => onMarkerClick(location4)} 
+          icon= 'red_MarkerB.png' 
+          onClick={() => onMarkerClick(location4)} 
         />
         {selected && (
           <InfoWindow

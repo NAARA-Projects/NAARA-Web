@@ -19,13 +19,13 @@ const Navbar = () => {
                         </div>
                         <Image src={'/line.svg'} alt={"logo"} height={24} width={1} className="mx-6"/>
                         <Link href='/' className="mx-2"><p>Home</p></Link>
-                        <Link href='/map' className="mx-2"><p>Map</p></Link>
+                        <Link href='/' className="mx-2"><p>Map</p></Link>
                     </div>
-                    <div className="flex-initial flex w-full px-40">
+                    <div className="flex-initial flex w-full mx-40">
                         <SearchInput customClass='min-w-[300px] max-width-[800px] shrink-0' classInput='w-full' />
                     </div>
                     <div className="flex flex-initial my-[2px] ml-auto justify-self-end">
-                        <Link href='/login' className="mx-auto my-[2px] shrink-0"><p>Log in</p></Link>
+                        <Link href='/login' className="mx-2 my-[2px] shrink-0"><p>Log in</p></Link>
                         <CustomButton title={"Subscribe"} handleClick={subscribeButtonClick} containerStyles="mx-2 bg-gradient-to-r from-[#CA8F36] to-[#D04C00] rounded-lg px-3 py-[2px]" />
                         <Image src={"/profileHolder.svg"} alt={"profile"} width={32} height={32} className="mx-4"/>
                     </div>
