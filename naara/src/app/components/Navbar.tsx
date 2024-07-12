@@ -27,8 +27,8 @@ const Navbar = () => {
                         <SearchInput customClass='min-w-[300px] max-width-[800px] shrink-0' classInput='w-full' />
                     </div>
                     <div className="flex flex-initial my-[2px] ml-auto justify-self-end">
-                        <Link href='/login' className="mx-2 my-[2px] shrink-0"><p>Log in</p></Link>
-                        <Link href="/map" className={styles.link}><span className={styles.text}><b>Subscribe</b></span></Link>
+                        <Link href='/login' className="mx-2 mt-[3.5px] mb-[2px] shrink-0"><p>Log in</p></Link>
+                        <Link href="/map" className={`mt-[2.5px] ${styles.link}`}><span className={styles.text}><b>Subscribe</b></span></Link>
                         <Image src={"/profileHolder.svg"} alt={"profile"} width={32} height={32} className="mx-4"/>
                     </div>
                 </div>
