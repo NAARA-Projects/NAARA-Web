@@ -24,7 +24,7 @@ const Navbar = () => {
                         <Link href='/' className="mx-5"><p>News</p></Link>
                     </div>
                     <div className="flex-initial flex w-full mx-40">
-                        <SearchInput customClass='min-w-[300px] max-width-[800px] shrink-0' classInput='w-full' />
+                        <SearchInput customClass='min-w-[300px] max-width-[800px] shrink-0' classInput='w-full'/>
                     </div>
                     <div className="flex flex-initial my-[2px] ml-auto justify-self-end">
                         <Link href='/login' className="mx-2 mt-[3.5px] mb-[2px] shrink-0"><p>Log in</p></Link>
