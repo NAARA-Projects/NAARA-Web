@@ -6,7 +6,6 @@ import { CustomButton } from './components';
 
 export default function Home() {
   const downloadButtonClick = () => {
-
   };
 
   return (
