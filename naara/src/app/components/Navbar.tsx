@@ -45,7 +45,7 @@ const Navbar = () => {
                     </div>
                     <div className="flex flex-initial my-[2px] ml-auto justify-self-end">
                         <Link href='/login' className="mx-2 mt-[3.5px] mb-[2px] shrink-0"><p>Log in</p></Link>
-                        <Link href="/subscribe" className={`mt-[2.5px] ${styles.link2}`}><span className={styles.text2}><b>Subscribe</b></span></Link>
+                        <Link href="/subscribe" className={`mt-[4px] ${styles.link2}`}><span className={styles.text2}><b>Subscribe</b></span></Link>
                         <div
                             className="flex flex-initial my-[2px] ml-auto justify-self-end relative"
                             onMouseEnter={handleMouseEnter}
