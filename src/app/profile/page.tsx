@@ -15,7 +15,7 @@ export default function Profile() {
                 </div>
             </div>
             
-            <div> {/*All Bottom Part*/}
+            <div className="flex flex-row"> {/*All Bottom Part*/}
                 <div className="w-[668]">
                     <div> {/*Personal Info */}
                         <div className="ml-52">
@@ -95,29 +95,34 @@ export default function Profile() {
                     </div>
                 </div>
 
-                <div> {/*Right side*/}
+                <div className="flex flex-row"> {/*Right side*/}
+                    <div>
+                        <img src="/profileSeparator.svg"></img>
+                    </div>
 
-                    <div className="flex flex-col"> {/*John Doe Card*/}
-                        <div className="p-5 w-80 h-36 bg-gradient-to-r from-[rgba(255,255,255,0.1)] to-[rgba(217, 217, 217, 0.1)] border border-[rgba(255,255,255,0.1)] rounded-3xl">
-                            <div className="flex flex-col gap-y-1">
-                                <div className="flex flex-row gap-x-5">
-                                    <img src="/dharman.svg" alt="dharman" className="object-contain w-20"></img>
-                                    <div className="flex flex-col justify-center">
-                                        <p className="text-white font-segoe font-semibold">John Doe</p>
-                                        <p className="text-white opacity-50">johndoe@gmail.com</p>
+                    <div className="flex flex-col">
+                        <div className="flex flex-col"> {/*John Doe Card*/}
+                            <div className="p-5 w-80 h-36 bg-gradient-to-r from-[rgba(255,255,255,0.1)] to-[rgba(217, 217, 217, 0.1)] border border-[rgba(255,255,255,0.1)] rounded-3xl">
+                                <div className="flex flex-col gap-y-1">
+                                    <div className="flex flex-row gap-x-5">
+                                        <img src="/dharman.svg" alt="dharman" className="object-contain w-20"></img>
+                                        <div className="flex flex-col justify-center">
+                                            <p className="text-white font-segoe font-semibold">John Doe</p>
+                                            <p className="text-white opacity-50">johndoe@gmail.com</p>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div>
-                                    <p className="text-white opacity-50 tracking-tight">ID: 05540209969236768948</p>
+                                    <div>
+                                        <p className="text-white opacity-50 tracking-tight">ID: 05540209969236768948</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
 
-                    <div> {/*Right bottom*/}
+                        <div> {/*Right bottom*/}
 
+                        </div>
                     </div>
                 </div>
             </div>
