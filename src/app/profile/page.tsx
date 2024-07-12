@@ -15,10 +15,10 @@ export default function Profile() {
                 </div>
             </div>
             
-            <div className="flex flex-row"> {/*All Bottom Part*/}
+            <div className="flex flex-row gap-x-10"> {/*All Bottom Part*/}
                 <div className="w-[668]">
                     <div> {/*Personal Info */}
-                        <div className="ml-52">
+                        <div className="ml-36">
                             <p className="font-segoe font-extralight text-3xl tracking-tight text-white">Details</p>
                             <div className="mt-3 flex flex-row gap-x-7">
                                 <div className="flex flex-col gap-y-5">
@@ -32,7 +32,7 @@ export default function Profile() {
                             </div>
                         </div>
                         
-                        <div className="ml-52 mt-10">
+                        <div className="ml-36 mt-10">
                             <p className="font-segoe font-extralight text-3xl tracking-tight text-white">Address</p>
                             <div className="mt-3 flex flex-row gap-x-7">
                                 <div className="flex flex-col gap-y-5">
@@ -74,13 +74,13 @@ export default function Profile() {
                             </div>
                         </div>
 
-                        <div className="ml-52 mt-8">
+                        <div className="ml-36 mt-8">
                             <CustomButton title="Save" containerStyles="text-white border-0 bg-[#2457B5] font-segoe font-extralight rounded-custom-border-rad-69 border-[rgba(255,255,255,0.1)] px-8 py-3" handleClick={uselessFunction}/>
                         </div>
                     </div>
 
 
-                    <div className="ml-52 mt-10"> {/* Delete Account */}
+                    <div className="ml-36 mt-10"> {/* Delete Account */}
                         <div className="flex flex-col gap-y-7 w-[670px]">
                             <p className="font-segoe font-extralight text-3xl tracking-tight text-white"> Delete Account</p>
                             <div><p className="text-lg font-segoe font-extralight text-white opacity-60">Click REQUEST ACCOUNT DELETE to start the process of permanently deleting your naara. account including all of its personal information.</p></div>
@@ -95,14 +95,14 @@ export default function Profile() {
                     </div>
                 </div>
 
-                <div className="flex flex-row"> {/*Right side*/}
-                    <div>
-                        <img src="/profileSeparator.svg"></img>
-                    </div>
+                <div>
+                    <img src="/profileSeparator.svg"></img>
+                </div>
 
+                <div className="flex flex-row"> {/*Right side*/}
                     <div className="flex flex-col">
-                        <div className="flex flex-col"> {/*John Doe Card*/}
-                            <div className="p-5 w-80 h-36 bg-gradient-to-r from-[rgba(255,255,255,0.1)] to-[rgba(217, 217, 217, 0.1)] border border-[rgba(255,255,255,0.1)] rounded-3xl">
+                        <div className="flex flex-col mb-6"> {/*John Doe Card*/}
+                            <div className="p-5 w-72 h-36 bg-gradient-to-r from-[rgba(255,255,255,0.1)] to-[rgba(217, 217, 217, 0.1)] border border-[rgba(255,255,255,0.1)] rounded-3xl">
                                 <div className="flex flex-col gap-y-1">
                                     <div className="flex flex-row gap-x-5">
                                         <img src="/dharman.svg" alt="dharman" className="object-contain w-20"></img>
@@ -120,7 +120,13 @@ export default function Profile() {
                         </div>
 
 
-                        <div> {/*Right bottom*/}
+                        <div className="flex flex-col font-segoe text-white text-base"> {/*Right bottom*/}
+                            <div>
+                                <p className="opacity-50">Bio</p>
+                            </div>
+                            <div className="p-5 w-72 h-96 bg-gradient-to-r from-[rgba(255,255,255,0.1)] to-[rgba(217, 217, 217, 0.1)] border border-[rgba(255,255,255,0.1)] rounded-3xl p-7">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                            </div>
 
                         </div>
                     </div>
