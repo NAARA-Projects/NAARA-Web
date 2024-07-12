@@ -12,6 +12,13 @@
     position: relative;
   }
 
+  .link3 {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit; 
+    position: relative;
+  }
+
   .link .text:hover {
     filter: brightness(170%);
   }
@@ -20,6 +27,10 @@
     filter: brightness(170%);
   }
   
+  .link3 .text3:hover {
+    filter: brightness(170%);
+  }
+
   .text {
     background: linear-gradient(to right, #5ABBDC, #2457B5);
     -webkit-background-clip: text;
@@ -33,6 +44,17 @@
   
   .text2 {
     background: linear-gradient(to right, #CA8F36, #D04C00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    transition: filter 0.3s ease, text-decoration 0.3s ease;
+    position: relative; 
+    padding-left: 10px; 
+  }
+
+  .text3 {
+    background: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -66,11 +88,27 @@
     transition: transform 0.3s ease, width 0.3s ease; 
   }
 
+  .link3 .text3::after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 40px); 
+    height: 2px;
+    background-color: #FFFFFF; 
+    bottom: -5px; 
+    left: 24px; 
+    transform: scaleX(0);
+    transition: transform 0.3s ease, width 0.3s ease; 
+  }
+
   .link:hover .text::after {
     transform: scaleX(1);
   }
   
   .link2:hover .text2::after {
+    transform: scaleX(1);
+  }
+
+  .link3:hover .text3::after {
     transform: scaleX(1);
   }
   
