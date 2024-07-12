@@ -6,7 +6,7 @@ import { time } from "console";
 const Map: React.FC = () => {
   const mapContainerStyle = {
     width: '100%',
-    height: '606px',
+    height: '100vh',
   };
 
   const center = {
@@ -57,6 +57,7 @@ const Map: React.FC = () => {
         icon= 'red_MarkerB.png' />
       </GoogleMap>
     </LoadScript>
+    
   );
 };
 
