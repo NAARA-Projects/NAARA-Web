@@ -1,13 +1,28 @@
 "use client";
-import React from "react";
+import React, {useState} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import SearchInput from "./searchBar";
 import CustomButton from "./CustomButton";
-import styles from './Explore.module.css';
+import styles from './Navbar.module.css';
+import ProfileDropdown from "./ProfileDropdown";
 
 const Navbar = () => {
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const subscribeButtonClick = () => {
+    };
+    const [isProfileOpen, setIsProfileOpen] = useState(false);
+
+    const toggleProfileDropdown = () => {
+        setIsProfileOpen(!isProfileOpen);
+    };
+
+    const handleProfileHover = () => {
+        setIsDropdownOpen(true);
+    };
+
+    const handleProfileLeave = () => {
+        setIsDropdownOpen(false);
     };
     return(
         <header className="fixed z-10 w-full">
@@ -28,10 +43,11 @@ const Navbar = () => {
                     </div>
                     <div className="flex flex-initial my-[2px] ml-auto justify-self-end">
                         <Link href='/login' className="mx-2 mt-[3.5px] mb-[2px] shrink-0"><p>Log in</p></Link>
-                        <Link href="/subscribe" className={`mt-[2.5px] ${styles.link2}`}>
-                <span className={styles.text2}><b>Subscribe</b></span>
-            </Link>
-                        <Image src={"/profileHolder.svg"} alt={"profile"} width={32} height={32} className="mx-4"/>
+                        <Link href="/subscribe" className={`mt-[2.5px] ${styles.link2}`}><span className={styles.text2}><b>Subscribe</b></span></Link>
+                        <div onMouseEnter={handleProfileHover} onMouseLeave={handleProfileLeave}>
+                            <Image src={"/profileHolder.svg"} alt={"profile"} width={32} height={32} className="mx-4 cursor-pointer" />
+                        </div>
+                        <ProfileDropdown isOpen={isDropdownOpen} />
                     </div>
                 </div>
             </nav>
