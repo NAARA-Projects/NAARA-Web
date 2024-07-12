@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Head from 'next/head';
 import { CustomButton, Footer } from './components';
-import styles from './components/Explore.module.css';
+import styles from './components/Navbar.module.css';
 
 export default function Home() {
   const downloadButtonClick = () => {
