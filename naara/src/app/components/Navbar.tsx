@@ -9,14 +9,7 @@ import ProfileDropdown from "./ProfileDropdown";
 
 const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const subscribeButtonClick = () => {
-    };
-    const [isProfileOpen, setIsProfileOpen] = useState(false);
-
-    const toggleProfileDropdown = () => {
-        setIsProfileOpen(!isProfileOpen);
-    };
-
+    
     const handleProfileHover = () => {
         setIsDropdownOpen(true);
     };
@@ -24,6 +17,15 @@ const Navbar = () => {
     const handleProfileLeave = () => {
         setIsDropdownOpen(false);
     };
+
+    const handleMouseEnter = () => {
+        setIsDropdownOpen(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsDropdownOpen(false);
+    };
+
     return(
         <header className="fixed z-10 w-full">
             <nav className="fixed bg-[#0F0F0F] w-full px-10">
@@ -44,10 +46,14 @@ const Navbar = () => {
                     <div className="flex flex-initial my-[2px] ml-auto justify-self-end">
                         <Link href='/login' className="mx-2 mt-[3.5px] mb-[2px] shrink-0"><p>Log in</p></Link>
                         <Link href="/subscribe" className={`mt-[2.5px] ${styles.link2}`}><span className={styles.text2}><b>Subscribe</b></span></Link>
-                        <div onMouseEnter={handleProfileHover} onMouseLeave={handleProfileLeave}>
-                            <Image src={"/profileHolder.svg"} alt={"profile"} width={32} height={32} className="mx-4 cursor-pointer" />
+                        <div
+                            className="flex flex-initial my-[2px] ml-auto justify-self-end relative"
+                            onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}
+                        >
+                            <Image src="/profileHolder.svg" alt="profile" width={32} height={32} className="mx-4" />
+                            <ProfileDropdown isOpen={isDropdownOpen} onClose={handleMouseLeave} />
                         </div>
-                        <ProfileDropdown isOpen={isDropdownOpen} />
                     </div>
                 </div>
             </nav>
