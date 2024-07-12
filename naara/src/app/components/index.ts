@@ -13,6 +13,6 @@ export{
     searchBar,
     RecentlyAdded,
     RelevantToYou,
-    ProfileCards
+    ProfileCards,
 }
 
