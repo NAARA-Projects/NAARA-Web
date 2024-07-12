@@ -26,7 +26,7 @@ const Footer = () => {
                 Vida Bumiwedari, Jl. Saraswati No.1, Padurenan, Kec. Mustika
                 Jaya,
               </p>
-              <p>Kota Bks, Jawa Barat 17156, Indonesia</p>
+              <p>Kota Bekasi, Jawa Barat 17156, Indonesia</p>
             </div>
             <p>+62 817-5172-221</p>
           </div>
