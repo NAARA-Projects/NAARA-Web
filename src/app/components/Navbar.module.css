@@ -107,13 +107,6 @@
   .link2:hover .text2::after {
     transform: scaleX(1);
   }
-  
-  p.twoline {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-  }
 
   .link3:hover .text3::after {
     transform: scaleX(1);

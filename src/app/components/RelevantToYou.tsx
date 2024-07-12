@@ -13,7 +13,7 @@ const RecentlyAdded = ({ eventName, eventDesc, image, userIcon, userName }) => {
         <Image src={image} alt={"orgicon"} width={67.5} height={67.5} className="w-[67.5px] h-[67.5px] mr-3"/>
         <div>
           <p className="text-white font-segoe font-[16px]">{eventName}</p>
-          <p className={`w-[250px] font-segoe font-[13px] text-[#FFFFFF99] text-ellipsis overflow-hidden inline-block ${styles.twoline}`}>{eventDesc}</p>
+          <p className={`w-[250px] font-segoe font-[13px] text-[#FFFFFF99] line-clamp-2`}>{eventDesc}</p>
         </div>
       </div>
       <div className="flex-row flex mt-2 justify-between">
