@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import searchBar from './searchBar';
 import RecentlyAdded from './RecentlyAdded';
 import RelevantToYou from './RelevantToYou';
+import ProfileCards from './ProfileCards';
 
 export{
     CustomButton,
@@ -11,6 +12,7 @@ export{
     Navbar,
     searchBar,
     RecentlyAdded,
-    RelevantToYou
+    RelevantToYou,
+    ProfileCards,
 }
 

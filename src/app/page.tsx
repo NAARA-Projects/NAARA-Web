@@ -48,7 +48,6 @@ export default function Home() {
             <div className='w-96'>
               <img src='Figma_Beta_bXYnmTpNR9.gif' alt='phone view gif' className=' object-contain rounded-custom-border-rad-35'></img>
             </div>
-            
             <div className='text-white w-custom-width-400'>
               <p className='font-bold font-lexend text-2xl'>
                 Intuitive user experience
