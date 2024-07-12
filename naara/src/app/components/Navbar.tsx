@@ -19,7 +19,7 @@ const Navbar = () => {
                         </div>
                         <Image src={'/line.svg'} alt={"logo"} height={24} width={1} className="mx-6"/>
                         <Link href='/' className="mx-2"><p>Home</p></Link>
-                        <Link href='/' className="mx-2"><p>Map</p></Link>
+                        <Link href='/map' className="mx-2"><p>Map</p></Link>
                     </div>
                     <div className="flex-initial flex w-full mx-40">
                         <SearchInput customClass='min-w-[300px] max-width-[800px] shrink-0' classInput='w-full' />
