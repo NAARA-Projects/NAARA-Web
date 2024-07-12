@@ -23,11 +23,17 @@ const config: Config = {
       },
       padding:{
         'custom-padding-173': '173px',
-        'custom-padding-77': '77px,'
+        'custom-padding-77': '77px,',
+        'custom-padding-89': '89px',
+        'custom-padding-88': '88px',
+        'custom-padding-44': '44px',
+        'custom-padding-45': '45px',
+        'custom-padding-36': '36px,'
       },
       fontSize:{
         'custom-size-24': '24px',
         'custom-size-40': '40px',
+        'custom-size-20': "20px"
       },
       spacing:{
         'custom-space-12': '12px',
@@ -42,11 +48,20 @@ const config: Config = {
       height:{
         'custom-height-47': '47px',
         'custom-height-64': '64px',
+        'custom-height-27': '27px',
       },
       margin:{
         'custom-margin-77': '77px',
         'custom-margin-173': '173px',
         'custom-margin-82': '82px',
+        'custom-margin-89': '89px',
+      },
+      gap:{
+        'custom-gap-16': '16px',
+        'custom-gap-20': '20px',
+        'custom-gap-15': '15px',
+        'custom-gap-12': '12px',
+        'custom-gap-51': '51px',
       }
     },
   },
