@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       
       
-      <main className='w-full h-full min-h-screen z-0 bg-customBlack'>
+      <main className='w-full h-[200vh] min-h-screen z-0 bg-customBlack'>
         <div className="relative w-full h-screen bg-cover bg-no-repeat bg-center" style={{ backgroundImage: 'url(/landingcover.svg)' }}>
           <div className='relative items-center justify-center pt-custom-padding-173 pb-0 text-white space-y-custom-space-12'>
             <p className='font-semibold font-lexend text-center text-5xl lg:text-5xl md-text-3xl'>Cleanup, made fun</p>
@@ -26,33 +26,25 @@ export default function Home() {
           </div>
 
           <div className='flex flex-row gap-custom-gap-100 justify-center items-center mt-custom-margin-40'>
-            <img src='/getitongoogleplay.svg' alt='get it on google play' className='object-contain'></img>
-            <img src='/downloadontheappstore.svg' alt='download on appstore' className='object-contain'></img>
+            <Image src='/getitongoogleplay.svg' alt='get it on google play' className='object-contain' width={225} height={75}></Image>
+            <Image src='/downloadontheappstore.svg' alt='download on appstore' className='object-contain' width={225} height={75}></Image>
           </div>
-        </div>
-
-        <div className='flex flex-col justify-center items-center mb-16'>
-          <div className='mb-custom-margin-40'>
+          <div className='mb-custom-margin-40 flex flex-col justify-center items-center mt-16'>
             <Image src="ipadlastverylast.svg" alt='Ipad View' width={800} height={940} className='object-contain' />
           </div>
-
           <div className='mb-custom-margin-40'>
             <img src='/below ipad.svg' alt='Line' className='object-contain'></img>
           </div>
-
           <div className="w-auto h-custom-height-64 items-center justify-center text-center mb-20">
             <p className='font-segoe font-thin text-white text-5xl text-center'>
-              Created with <span className={styles.text}>you</span> in mind.
+              Created with<span className={styles.text}>you</span> in mind.
             </p>
 
             <p className='text-2xl font-segoe font-thin text-white opacity-60 mt-10'>
               Constantly striving for change from within to build a healthy habit.
             </p>
           </div>
-        </div>
-
-        <div className='mx-20'>
-          <div className='flex flex-row gap-x-10 w-full justify-center'>
+          <div className='flex flex-row gap-x-10 w-full justify-center mt-32'>
             <div className='w-96'>
               <img src='Figma_Beta_bXYnmTpNR9.gif' alt='phone view gif' className=' object-contain rounded-custom-border-rad-35'></img>
             </div>
@@ -67,9 +59,8 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 }
