@@ -66,7 +66,7 @@ const Map: React.FC = () => {
         </LoadScript>
       </div>
       <main className="w-full flex items-center justify-center">
-        <div className="absolute w-[90vw] h-[2000px] bg-[#202020E6] top-[75vh] rounded-t-3xl p-3">
+        <div className="absolute w-[90vw] h-[2000px] bg-[#202020E6] top-[75vh] rounded-t-3xl p-1 backdrop-blur-xl">
           <div className="flex-col flex items-center justify-center">
             <Image src={"/drag.png"} alt={""} width={133} height={6}/>
           <div className="flex-col flex items-center justify-center"></div>
