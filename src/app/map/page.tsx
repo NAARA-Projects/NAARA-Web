@@ -15,8 +15,8 @@ const Map: React.FC = () => {
   };
 
   const center = {
-    lat: -8.495647, // Initial center latitude
-    lng: 115.090852, // Initial center longitude
+    lat: -8.495647, 
+    lng: 115.090852,
   };
 
   const locations = [
