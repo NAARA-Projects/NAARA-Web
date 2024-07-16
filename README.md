@@ -1,4 +1,4 @@
-Additional Info on the web-app:
+## Additional Info on the web-app:
 
 - If the layout of the draggable tab on the Explore page is weird, we suggest you to adjust your browser’s zoom to 75%
 - If the Google Map API doesn’t show up when you click on the explore page, make sure to refresh the page.
