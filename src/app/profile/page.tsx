@@ -1,5 +1,6 @@
 'use client'
 import {CustomButton, ProfileCards } from "../components";
+import {Footer} from "../components";
 
 export default function Profile() {
     const uselessFunction = () => {
@@ -82,16 +83,20 @@ export default function Profile() {
 
                     <div className="ml-36 mt-10"> {/* Delete Account */}
                         <div className="flex flex-col gap-y-7 w-[670px]">
+                            <br></br>
                             <p className="font-segoe font-extralight text-3xl tracking-tight text-white"> Delete Account</p>
                             <div><p className="text-lg font-segoe font-extralight text-white opacity-60">Click REQUEST ACCOUNT DELETE to start the process of permanently deleting your naara. account including all of its personal information.</p></div>
                             <div className="text-lg mb-8 font-segoe font-semibold text-white opacity-60">
                                 <p>If you request to delete your account, your account will be deleted in 14 days. During this time, you can login to reactivate your account, which will cancel your deletion. After 14 days deletion will be irreversible.</p>
                             </div>
                         </div>
-
+                        <br></br>
                         <div>
                             <CustomButton title="REQUEST ACCOUNT DELETE" containerStyles="bg-[#B60000] border-[rgba(255, 255, 255, 0.10)] rounded-custom-border-rad-69 text-white font-segoe font-extralight py-4 px-12" handleClick={uselessFunction}/>
                         </div>
+                        <br></br>
+                        <br></br>
+                        <br></br>
                     </div>
                 </div>
 
@@ -132,6 +137,7 @@ export default function Profile() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </main>
     );
 }
