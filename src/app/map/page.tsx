@@ -16,7 +16,7 @@ const Map: React.FC = () => {
 
   const center = {
     lat: -8.495647, 
-    lng: 115.090852,
+    lng: 115.090852, 
   };
 
   const locations = [
@@ -91,7 +91,7 @@ const Map: React.FC = () => {
               <Image src={"/separatordrag.png"} alt={"separator"} width={2} height={165} className="mx-4 mt-10"/>
               <div className="flex-col flex items-start justify-center">
                 <p className="text-white font-lexend font-semibold text-[24px] mb-2">Relevant to you</p>
-                <RelevantToYou eventName='Nusa Dua Beach' eventDesc='Nusa Dua is a resort area built in the 1970s in the southern part of Bali, Indonesia. Known as an enclave of large five-star resorts, it covers 350 hectares of land and encloses more than 20 resorts.' image={'/orgicon67.png'} userIcon={'/usericon.png'} userName='Stnorocwzo'/>
+                <RelevantToYou eventName='Marunda Beach' eventDesc='In its time, Marunda Beach was one of the most popular tourism destinations in Indonesia. Located in Cilincing, Jakarta, the beach was blessed with clear blue water and free of plastic or cloth waste.' image={'/orgicon67.png'} userIcon={'/usericon.png'} userName='Stnorocwzo'/>
               </div>
             </div>
           </div>

@@ -36,7 +36,7 @@ const Navbar = () => {
                         <Image src={'/line.svg'} alt={"logo"} height={24} width={1} className="mx-6" />
                         <Link href="/" className={`mr-[4px] ${styles.link3}`}><span className={styles.text3}>Home</span></Link>
                         <Link href="/map" className={styles.link}><span className={styles.text}><b>Explore</b></span></Link>
-                        <Link href='/' className={`mx-[5px] ml-[3.5px] ${styles.link3}`}><span className={styles.text3}>News</span></Link>
+                        <Link href='/news' className={`mx-[5px] ml-[3.5px] ${styles.link3}`}><span className={styles.text3}>News</span></Link>
                     </div>
                     <div className="flex-initial flex w-full mx-40">
                         <SearchInput customClass='min-w-[300px] max-width-[800px] shrink-0' classInput='w-full' />
